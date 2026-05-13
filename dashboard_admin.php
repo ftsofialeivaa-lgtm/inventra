@@ -75,14 +75,22 @@ $stock_bajo        = pg_fetch_result(pg_query($conn, "SELECT COUNT(*) FROM produ
 
     <!-- Contenido -->
     <div class="main">
-        <div class="topbar">
+     <div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<div class="topbar">
+    <div style="display:flex; align-items:center; gap:14px;">
+        <div class="hamburger" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div>
             <div>
                 <div class="topbar-title">Panel principal</div>
                 <div class="topbar-sub">Bienvenido, <?= $nombre ?></div>
-            </div>
             <a href="logout.php" class="btn-logout">Cerrar sesión</a>
-        </div>
-
+    </div>
+</div>
         <div class="main-content">
 
             <div class="stats-grid">
@@ -155,5 +163,15 @@ $stock_bajo        = pg_fetch_result(pg_query($conn, "SELECT COUNT(*) FROM produ
     </div>
 
 </div>
+        <script>
+function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('active');
+}
+function closeSidebar() {
+    document.querySelector('.sidebar').classList.remove('open');
+    document.getElementById('overlay').classList.remove('active');
+}
+</script>
 </body>
 </html>
