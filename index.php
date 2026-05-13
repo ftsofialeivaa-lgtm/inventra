@@ -313,16 +313,9 @@ if (isset($_COOKIE[session_name()])) {
             <button type="submit" class="btn-in">INICIAR SESIÓN</button>
         </form>
 
-        <div class="or">
-            <div class="or-line"></div>
-            <span class="or-text">¿Nuevo aquí?</span>
-            <div class="or-line"></div>
-        </div>
-
-        <div class="links">
-            <a href="register.php">Regístrese en el sistema</a>
-            <span class="reg">¿Olvidó su contraseña? <a href="#">Recupérela aquí</a></span>
-        </div>
+<div class="links">
+    <a href="recuperar.php">¿Olvidó su contraseña? Recupérela aquí</a>
+</div>
     </div>
 </div>
 
