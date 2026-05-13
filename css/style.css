@@ -613,3 +613,155 @@ tbody tr:hover { background: #faf5ff; }
 .login-form-wrap .form-group {
     margin-bottom: 4px;
 }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+
+    /* Login */
+    body {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .left {
+        min-height: 45vh;
+        padding: 32px 24px;
+    }
+
+    .big-title {
+        font-size: 26px;
+    }
+
+    .right {
+        width: 100%;
+        min-height: auto;
+        padding: 24px 20px;
+    }
+
+    .card {
+        padding: 28px 20px;
+    }
+
+    /* Layout sidebar */
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 12px;
+    }
+
+    .sb-logo {
+        width: 100%;
+        padding: 8px 12px;
+        border-bottom: none;
+        border-right: none;
+    }
+
+    .sb-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 4px 8px;
+        width: 100%;
+    }
+
+    .sb-label { display: none; }
+
+    .sb-item {
+        padding: 6px 10px;
+        margin-bottom: 0;
+        border-radius: 6px;
+    }
+
+    .sb-footer {
+        width: 100%;
+        padding: 8px 12px;
+        border-top: 0.5px solid rgba(255,255,255,0.1);
+        margin-top: 4px;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .topbar {
+        padding: 12px 16px;
+        position: relative;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .stat-val {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    thead th {
+        padding: 8px 10px;
+    }
+
+    tbody td {
+        padding: 10px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        padding: 12px 16px;
+    }
+
+    .btn {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .big-title {
+        font-size: 22px;
+    }
+
+    .left {
+        min-height: 40vh;
+        padding: 24px 16px;
+    }
+
+    .sb-text {
+        font-size: 11px;
+    }
+
+    .topbar-title {
+        font-size: 14px;
+    }
+}
