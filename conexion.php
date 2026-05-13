@@ -1,11 +1,9 @@
 <?php
-$url = parse_url("postgresql://postgres:txccDihzEGeuqPYsPIYTVtfJOxCeKkWX@shuttle.proxy.rlwy.net:16824/railway");
-
-$host     = $url["host"];
-$port     = $url["port"];
-$dbname   = ltrim($url["path"], "/");
-$user     = $url["user"];
-$password = $url["pass"];
+$host     = getenv('DB_HOST') ?: 'shuttle.proxy.rlwy.net';
+$port     = getenv('DB_PORT') ?: '16824';
+$dbname   = getenv('DB_NAME') ?: 'railway';
+$user     = getenv('DB_USER') ?: 'postgres';
+$password = getenv('DB_PASSWORD') ?: 'txccDihzEGeuqPYsPIYTVtfJOxCeKkWX';
 
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password sslmode=require");
 
